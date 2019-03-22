@@ -33,6 +33,7 @@ export class ViewComponent implements OnInit {
     console.log(this.petid)
     this._httpServices.deletePet(this.petid)
       .subscribe(data => console.log("delete pet"))
+      this._router.navigate(['']);
   }
 
 

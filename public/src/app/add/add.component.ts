@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-
+import { ActivatedRoute, Params, Router } from '@angular/router';
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
@@ -12,7 +12,7 @@ export class AddComponent implements OnInit {
     name:""
   };
 
-  constructor(private _httpService: HttpService ) { }
+  constructor(private _httpService: HttpService,private _route:ActivatedRoute, private _router:Router ) { }
 
   ngOnInit() {
     this.newPet ={ name:'', type:'', description:'',skills:{}}
@@ -30,6 +30,7 @@ export class AddComponent implements OnInit {
         else{
           console.log("added new pet"+data)
           this.newPet ={ name:'', type:'', description:'',skills:{}};
+          this._router.navigate(['']);
         }
       });
   }

@@ -44,6 +44,7 @@ export class EditComponent implements OnInit {
         }
         else{
           console.log("updated")
+          this._router.navigate(['']);
         }
       }
       )};
