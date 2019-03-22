@@ -1,6 +1,6 @@
 <div class="content">
   <h6>These Pets Need a home</h6>
-  <table class="table">
+  <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">Pet</th>
@@ -12,7 +12,7 @@
       <tr *ngFor= "let pet of allPets" >
         <td>{{pet.name}}</td>
         <td>{{pet.type}}</td>
-        <td><button [routerLink]="['view',pet._id]">Details</button> &nbsp; <button [routerLink]="['edit',pet._id]">Edit</button></td>
+        <td><button class="btn btn-danger" [routerLink]="['view',pet._id]">Details</button> &nbsp; <button class="btn btn-warning" [routerLink]="['edit',pet._id]">Edit</button></td>
       </tr>
     </tbody>
   </table>
