@@ -2,7 +2,9 @@
     width: 800px;
     padding:20px;
 }
-
+#butt{
+margin-left: 600px;
+}
 body {
     box-sizing:border-box;
     -webkit-box-sizing:border-box;
