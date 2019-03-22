@@ -1,0 +1,19 @@
+<div class="content">
+  <h6>These Pets Need a home</h6>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Pet</th>
+        <th scope="col">Type</th>
+        <th scope="col">Actions Available</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let pet of allPets" >
+        <td>{{pet.name}}</td>
+        <td>{{pet.type}}</td>
+        <td><button [routerLink]="['view',pet._id]">Details</button> &nbsp; <button [routerLink]="['edit',pet._id]">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

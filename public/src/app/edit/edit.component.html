@@ -1,0 +1,33 @@
+<div class="content">
+  <a [routerLink]="['']">Home</a>
+  <br>
+  <br>
+  <h6>Edit this Pet</h6>
+              
+  <div class="border">
+    <form >
+      <div class="">
+        <label for="" >Pet Name</label><br>
+        <input type="text" name="gotPet.name" [(ngModel)]='gotPet.name' ><br>
+        <p *ngIf="errors" class="text-danger">{{errors.name.message}}</p>
+
+        <label for="" >Pet Type</label><br>
+        <input type="text" name="gotPet.type" [(ngModel)]='gotPet.type' ><br>
+        <p *ngIf="errors" class="text-danger">{{errors.type.message}}</p>
+        <label for="" >Description</label><br>
+        <input type="text" name="gotPet.description" [(ngModel)]='gotPet.description' ><br><br>
+        <p *ngIf="errors" class="text-danger">{{errors.description.message}}</p>
+        <h5>Skills(optional)</h5>
+        <label for="" >Skill 1:</label>&nbsp;
+        <input type="text" name="gotPet.skills.skill1" [(ngModel)]='gotPet.skills.skill1' ><br>
+        <label for="" >Skill 2:</label>&nbsp;
+        <input type="text" name="gotPet.skills.skill2" [(ngModel)]='gotPet.skills.skill2'><br>
+        <label for="" >Skill 3:</label>&nbsp;
+        <input type="text" name="gotPet.skills.skill3" [(ngModel)]='gotPet.skills.skill3'><br>
+        </div>
+      <br>
+      <button (click)="onSubmitEdit()" class="btn btn-primary mb-2">Edit Pet</button>
+      &nbsp;
+      <button [routerLink]="['']" class="btn btn-primary mb-2">Cancel</button>
+    </form>
+  </div>

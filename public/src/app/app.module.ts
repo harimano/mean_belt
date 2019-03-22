@@ -6,10 +6,18 @@ import { AppComponent } from './app.component';
 import { HttpService } from './http.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
+import { ViewComponent } from './view/view.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddComponent,
+    EditComponent,
+    ViewComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,

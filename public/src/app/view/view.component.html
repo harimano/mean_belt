@@ -1,0 +1,16 @@
+<div class="content">
+  <a [routerLink]="['']">Home</a>
+  <br>
+  <br>
+  <h6>Details About {{gotPet.name}}</h6>
+              
+  <div class="border">
+    <h6> Pet Type: </h6> <p> {{gotPet.type}}</p> 
+        
+    <h6> Description: </h6> <p>  {{gotPet.description}}</p>
+  
+    <h6> Skills: </h6> <p>  {{gotPet.skills.skill1}},{{gotPet.skills.skill2}},{{gotPet.skills.skill3}}</p>
+  
+    <br>
+    <button (click)="deletePet()" class="btn btn-primary mb-2">Adopt This Pet</button>
+  </div>
